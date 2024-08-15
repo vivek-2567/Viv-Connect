@@ -1,0 +1,95 @@
+.register {
+    height: 100vh;
+    background-color: rgb(193, 190, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .card {
+      height: 50%;
+      width: 50%;
+      border-radius: 0.6rem;
+      display: flex;
+      background-color: white;
+      min-height: 37rem;
+      overflow: hidden;
+  
+      .left {
+        flex: 1;
+        width: 50%;
+        padding: 3.125rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3.125rem;
+        justify-content: center;
+  
+        h1 {
+          color: #555;
+        }
+  
+        form {
+          display: flex;
+          flex-direction: column;
+          gap:  2rem;
+        
+          input {
+              border: none;
+              border-bottom: 1px solid lightgray;
+              padding: 1.2rem 0.6rem;
+  
+          }
+        
+          button {
+              width: 50%;
+              padding: 0.6rem;
+              border: none;
+              cursor: pointer;
+              background-color: #938eef;
+              color: white;
+              font-weight: bold;
+  
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+        width: 20%;
+        overflow: visible;
+        background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+          url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
+            center;
+        background-size: cover;
+        padding: 3.125rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: white;
+  
+        h1 {
+          font-size: 4.7rem;
+          line-height: 4.7rem;
+        }
+  
+        p {
+        }
+  
+        span {
+          font-size: 1rem;
+        }
+  
+        button {
+          width: 50%;
+          padding: 1rem;
+          border: none;
+          background-color: white;
+          color: rebeccapurple;
+          font-weight: bold;
+          cursor: pointer;
+  
+        }
+      }
+
+    }
+  }
+  
