@@ -1,61 +1,85 @@
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 0.6rem 1.2rem;
-    justify-content: space-between;
-    height: 3.1rem;
-    border-bottom: 1px solid lightgray;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    
-    .left{
-        display: flex;
-        align-items: center;
-        gap: 1.8rem;
+@import "../../app.scss";
 
-        .navbar-left-link{
-            text-decoration: none;
+.navbar {
+	@include themify($themes) {
+		display: flex;
+		align-items: center;
+		padding: 0.6rem 1.2rem;
+		justify-content: space-between;
+		height: 3.1rem;
+		border-bottom: 1px solid themed("border");
+		position: sticky;
+		top: 0;
+		background-color: themed("bg");
+		color: themed("textColor");
+		z-index: 999;
 
-            span{
-                font-weight: bold;
-                font-size: 1.2rem;
-                color: darkblue;
-            }
-        }
+		.left {
+			display: flex;
+			align-items: center;
+			gap: 1.8rem;
 
-        .search{
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            border: 1px solid lightgray;
-            border-radius: 0.3rem;
-            padding: 0.3rem;
+			.navbar-left-link {
+				text-decoration: none;
 
-            input{
-                border: none;
-                width: 31rem;
-            }
-        }
-    }
-    .right{
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
+				span {
+					font-weight: bold;
+					font-size: 1.2rem;
+					color: themed("logo");
+				}
+			}
 
-        .user{
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-weight: 500 ;
+			.search {
+				display: flex;
+				align-items: center;
+				gap: 0.6rem;
+				border: 1px solid themed("border");
+				border-radius: 0.3rem;
+				padding: 0.3rem;
 
-            img{
-                width: 1.875rem;
-                height: 1.875rem;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-            span{}
-        }
-    }
+				input {
+					border: none;
+					width: 31rem;
+					background-color: transparent;
+					color: themed("textColor");
+
+					@include mobile{
+						display: none;
+
+					}
+
+					@include tablet{
+						width: 200px;
+					}
+				}
+			}
+		}
+		.right {
+			display: flex;
+			align-items: center;
+			gap: 1.2rem;
+
+			@include mobile{
+				display: none;
+			}
+
+			.user {
+				display: flex;
+				align-items: center;
+				gap: 0.6rem;
+				font-weight: 500;
+
+				@include tablet{
+					display: none;
+				}
+
+				img {
+					width: 1.875rem;
+					height: 1.875rem;
+					border-radius: 50%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
 }
